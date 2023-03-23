@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- daisi ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- heder section  -->
+    <header class="">
+        <nav class="m-5  ">
+            <div class="navbar bg-teal-100">
+                <div class="flex-1">
+                    <div class="mx-3">
+                        <h1 class="font-bold text-2xl">Interactive </h1>
+                        <p class="text-warm-gray-300 text-lg	">Geometry Genius</p>
+                    </div>
+                </div>
+                <div class="flex-none">
+                    <div>
+                        <button id="blogBtn" class="btn bg-blue-600 outline-none mx-5">Blog</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- main section  -->
+    <section>
+        <!-- card left  -->
+        <div class=" mx-5 mt-5 md:flex ">
+            <div class="calculate-left md:w-3/4 grid md:grid-cols-3 lg:grid-cols-3 gap-4 relative">
+                <div  class="border-2 border-grey-900">
+                    <div id="card-1" class="card w-full bg-base-100 rounded border-amber-600 px-5 pb-5">
+                        <figure class="px-10 pt-10">
+                            <img src="./images//triangle.png" alt="Shoes" class="rounded-xl h-24" />
+                        </figure>
+                        <div class="">
+                            <div class=" card-body items-center  text-center ">
+                                <h2 id="cardTriangle" class="card-title font-bold text-2xl">Triangle</h2>
+                                <p class="text-warm-gray-300 text-sm">Area (A) =0.5 x b x h</p>
+                                <div class="w-full flex"> 
+                                  <input id="triangleInputLeft" class="bg-gray-200 w-full placeholder-gray-800 pl-3" type="number" placeholder="b" >
+                                  <p class=" w-full">cm</p> 
+                                  <input id="triangleInputRight" class="bg-gray-200  w-full placeholder-gray-800 pl-3" type="number" placeholder="h">
+                                  <p class=" w-full">cm</p>
+                                </div>
+                            </div>
+                            <div class="card-actions  ">
+                                <button id="cardButton1" class=" bg-blue-600 w-full rounded py-1 text-white font-bold ">Calculate</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-2 border-grey-900">
+                    <div  id="card-2"class="card w-full bg-base-100 rounded border-amber-600 px-5 pb-5">
+                        <figure class="px-10 pt-10">
+                            <img src="./images/rectangle.png" alt="Shoes" class="rounded-xl h-24" />
+                        </figure>
+                        <div class="">
+                            <div class=" card-body items-center  text-center ">
+                                <h2 id="cardRectangle" class="card-title font-bold text-2xl">Rectangle</h2>
+                                <p class="text-warm-gray-300 text-sm">Area (A) = w x I</p>
+                                <div class="w-full flex"> 
+                                  <input id="rectangleInputLeft" class="bg-gray-200 w-full placeholder-gray-800 pl-3" type="number" placeholder="w" >
+                                  <p class=" w-full">cm</p> 
+                                  <input  id="rectangleInputRight" class="bg-gray-200  w-full placeholder-gray-800 pl-3" type="number" placeholder="i">
+                                  <p class=" w-full">cm</p>
+                                </div>
+                            </div>
+                            <div class="card-actions">
+                                <button id="cardButton2"  class=" bg-blue-600 w-full rounded py-1 text-white font-bold ">Calculate</button> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-2 border-grey-900">
+                    <div  id="card-3" class="card w-full bg-base-100 rounded border-amber-600 px-5 pb-5">
+                        <figure class="px-10 pt-10">
+                            <img src="./images/parallelogram.png" alt="Shoes" class="rounded-xl h-24" />
+                        </figure>
+                        <div class="">
+                            <div class=" card-body items-center  text-center ">
+                                <h2 id="cardParallelogram" class="card-title font-bold text-2xl">parllgrm</h2>
+                                <p class="text-warm-gray-300 text-sm">Area (A) =0.5 x b x h</p>
+                                <div class="w-full flex"> 
+                                    <input id="parallelogramInputLeft" class="bg-gray-200 w-full placeholder-gray-800 pl-3" type="number" placeholder="b" >
+                                    <p class=" w-full">cm</p> 
+                                    <input id="parallelogramInputRight" class="bg-gray-200  w-full placeholder-gray-800 pl-3" type="number" placeholder="h">
+                                    <p class=" w-full">cm</p>
+                                  </div>
+                            </div>
+                            <div class="card-actions">
+                                <button id="cardButton3" class=" bg-blue-600 w-full rounded py-1 text-white font-bold ">Calculate</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-2 border-grey-900">
+                    <div  id="card-4" class="card w-full bg-base-100 rounded border-amber-600 px-5 pb-5">
+                        <figure class="px-10 pt-10">
+                            <img src="./images/rhombus.png" alt="Shoes" class="rounded-xl h-24" />
+                        </figure>
+                        <div class="">
+                            <div class=" card-body items-center  text-center ">
+                                <h2 id="cardRhambus" class="card-title font-bold text-2xl">Rhombus</h2>
+                                <p class="text-warm-gray-300 text-sm">Area (A) =0.5 x d1 x d2</p>
+                                <div class="w-full flex"> 
+                                    <input id="rhombusInputLeft" class="bg-gray-200 w-full placeholder-gray-800 pl-3" type="number" placeholder="b" >
+                                    <p class=" w-full">cm</p> 
+                                    <input id="rhombusInputRight" class="bg-gray-200  w-full placeholder-gray-800 pl-3" type="number" placeholder="h">
+                                    <p class=" w-full">cm</p>
+                                  </div>
+                            </div>
+                            <div class="card-actions">
+                                <button id="cardButton4" class=" bg-blue-600 w-full rounded py-1 text-white font-bold ">Calculate</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-2 border-grey-900">
+                    <div  id="card-5" class="card w-full bg-base-100 rounded border-amber-600 px-5 pb-5">
+                        <figure class="px-10 pt-8  ">
+                            <img src="./images/pentagon.png" alt="Shoes" class="rounded-xl h-24" />
+                        </figure>
+                        <div class="pt-2">
+                            <div class=" card-body items-center  text-center ">
+                                <h2 id="cardPentagon" class="card-title font-bold text-2xl">Pentagon</h2>
+                                <p class="text-warm-gray-300 text-sm">Area (A) =0.5 x p x b</p>
+                                <div class="w-full flex"> 
+                                    <input id="pentagonInputLeft" class="bg-gray-200 w-full placeholder-gray-800 pl-3" type="number" placeholder="b" >
+                                    <p class=" w-full">cm</p> 
+                                    <input id="pentagonInputRight" class="bg-gray-200  w-full placeholder-gray-800 pl-3" type="number" placeholder="h">
+                                    <p class=" w-full">cm</p>
+                                  </div>
+                            </div>
+                            <div class="card-actions ">
+                                <button id="cardButton5"  class=" bg-blue-600 w-full rounded py-1 text-white font-bold ">Calculate</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-2 border-grey-900">
+                    <div  id="card-6" class="card w-full bg-base-100 rounded border-amber-600 px-5 pb-5">
+                        <figure class="px-10 pt-10 mb-2 ">
+                            <img src="./images/ellipse.png" alt="Shoes" class="rounded-xl" />
+                        </figure>
+                        <div  class="pt-2">
+                            <div class=" card-body items-center  text-center ">
+                                <h2 id="cardEllipse" class="card-title font-bold text-2xl">Ellipse</h2>
+                                <p class="text-warm-gray-300 text-sm">Area (A) = &#8508; ab</p>
+                                <div class="w-full flex"> 
+                                    <input id="ellipseInputLeft" class="bg-gray-200 w-full placeholder-gray-800 pl-3" type="number" placeholder="a" >
+                                    <p class=" w-full">cm</p> 
+                                    <input id="ellipseInputRight" class="bg-gray-200  w-full placeholder-gray-800 pl-3" type="number" placeholder="b">
+                                    <p class=" w-full">cm</p>
+                                  </div>
+                            </div>
+                            <div class="card-actions ">
+                                <button id="cardButton6"  class=" bg-blue-600 w-full rounded py-1 text-white font-bold ">Calculate</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- card right -->
+            <div class="calculate-right md:w-[25%]">
+                <div>
+                    <h1 class="font-bold text-2xl  text-center">Area Calculation</h1>
+                </div>
+                <div class="">
+                    <table class="table w-full">
+                      <tbody id="tBody">
+                        <!-- <tr>
+                          <td>name</td>
+                          <td>Total</td>
+                          <td><button>button</button></td>
+                        </tr> -->
+                      </tbody>
+                    </table>
+                  </div>
+
+
+                    <!-- <div class="w-[95%] mx-auto">
+                        <table class="table-fixed w-[90%] mx-auto">
+                            
+                            <thead>
+                                <tr>
+                                  <th>Serial</th>
+                                  <th>Song</th>
+                                  <th>Artist</th>
+                                  <th>Year</th>
+                                </tr>
+                              </thead>
+                            <tbody id="tbody">
+                              <tr>
+                                <td>1. Thehui</td>
+                                <td>Malcoer</td>
+                                <td>1961</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div> -->
+            </div>
+        </div> 
+    </section>
+    <script src="./index.js"></script>
+</body>
+
+</html>
