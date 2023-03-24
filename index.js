@@ -38,16 +38,17 @@ function cardFunction1(leftInput, rightInput, cardName, isDifferent) {
     serial += 1
     // target t-body
     const tBody = document.getElementById('tBody')
+
+
     const tr = document.createElement("tr")
     tr.innerHTML = `
              <tr>
               <td>${serial}.${cardName}</td>
               <td>${total} cm</td>  
-              <td><button>to meter</button></td>
+              <td><button id="clcButton">to meter</button></td>
              </tr>
             `
-    tBody.appendChild(tr)
-    console.log(tr.childNodes.childNodes)
+            const bttn = document.getElementById('clcButton')
 }
 
 // click handler card 1
@@ -200,4 +201,7 @@ card6.addEventListener("mouseout", function () {
 // navigate 
 document.getElementById('blogBtn').addEventListener('click', function () {
     window.location.href = 'http://127.0.0.1:5500/blog.html'
+})
+document.getElementById('useBtn').addEventListener('click', function () {
+    window.location.href = 'http://127.0.0.1:5500/use.html'
 })
